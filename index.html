@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f0f0f0">
-    <title class="rainbow">Our Memories</title>
+    <title>Our Memories</title>
     <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiT3VyIE1lbW9yaWVzIiwic2hvcnRfbmFtZSI6Ik1lbW9yaWVzIiwiZGVzY3JpcHRpb24iOiJPdXIgc3BlY2lhbCBtb21lbnRzIHRvZ2V0aGVyIiwic3RhcnRfdXJsIjoiLiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmMGYwZjAiLCJ0aGVtZV9jb2xvciI6IiNmMGYwZjAifQ==">
     <style>
         body {
@@ -34,9 +34,23 @@
             padding: 0 20px;
         }
         .title {
-            text-align: center;
-         //color: #333;
-            margin-bottom: 30px;
+          text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #ff6b6b, #ffa500, #ffff00, #00ff00, #00bfff, #9370db);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 5s ease infinite;
+}
+
+@keyframes rainbowText {
+  to {
+    background-position: 200% center;
+  }
         }
         .grid {
             display: grid;
