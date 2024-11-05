@@ -167,7 +167,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Our Special Memories ❤️ lol</h1>
+        <h1 class="title">Our Special Memories ❤️ ll</h1>
         <div class="grid" id="photoGrid">
             <!-- 30 cards for 5x6 grid -->
             <div class="card" data-description="First time I saw a clone of you in public <3">
@@ -274,7 +274,19 @@
     <div class="install-prompt" id="installPrompt">
         Add to Home Screen ✨
     </div>
+    <script>
+    window.addEventListener("load", () => {
+        let maxHeight = document.body.scrollHeight;
 
+        window.addEventListener("scroll", () => {
+            maxHeight = Math.max(maxHeight, document.body.scrollHeight);
+        });
+
+        window.addEventListener("beforeunload", () => {
+            alert("Final Page Height: " + maxHeight + "px");
+        });
+    });
+</script>
     <script>
         // Service Worker Registration
         if ('serviceWorker' in navigator) {
@@ -328,18 +340,5 @@
             }
         });
     </script>
-    <script>
-    window.addEventListener("load", () => {
-        let maxHeight = document.body.scrollHeight;
-
-        window.addEventListener("scroll", () => {
-            maxHeight = Math.max(maxHeight, document.body.scrollHeight);
-        });
-
-        window.addEventListener("beforeunload", () => {
-            alert("Final Page Height: " + maxHeight + "px");
-        });
-    });
-</script>
 </body>
 </html>
