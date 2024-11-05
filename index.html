@@ -35,22 +35,28 @@
             padding: 0 20px;
         }
         .title {
-          text-align: center;
-//  color: #333;
+  text-align: center;
+  color: #333;
   margin-bottom: 30px;
-  background: linear-gradient(to right, #ff6b6b, #ffa500, #ffff00, #00ff00, #00bfff, #9370db);
-  background-size: 200% auto;
+  background: linear-gradient(to right, #ff6b6b, #ffa500, #ffff00, #00ff00, #00bfff, #9370db, #ff6b6b);
+  background-size: 400% 400%;
   color: #000;
   background-clip: text;
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rainbowText 5s ease infinite;
+  animation: rainbowText 8s ease infinite;
 }
 
 @keyframes rainbowText {
-  to {
-    background-position: 200% center;
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
         }
         .grid {
@@ -135,6 +141,7 @@
         }
         .description {
             margin-top: 20px;
+            font-weight: bolder;
             line-height: 1.6;
             font-size: 1.1em;
             color: white;
