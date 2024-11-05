@@ -328,5 +328,18 @@
             }
         });
     </script>
+    <script>
+    window.addEventListener("load", () => {
+        let maxHeight = document.body.scrollHeight;
+
+        window.addEventListener("scroll", () => {
+            maxHeight = Math.max(maxHeight, document.body.scrollHeight);
+        });
+
+        window.addEventListener("beforeunload", () => {
+            alert("Final Page Height: " + maxHeight + "px");
+        });
+    });
+</script>
 </body>
 </html>
