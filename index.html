@@ -167,7 +167,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Our Special Memories ❤️ ll</h1>
+        <h1 class="title">Our Special Memories ❤️ 77</h1>
         <div class="grid" id="photoGrid">
             <!-- 30 cards for 5x6 grid -->
             <div class="card" data-description="First time I saw a clone of you in public <3">
@@ -275,19 +275,6 @@
         Add to Home Screen ✨
     </div>
     <script>
-    window.addEventListener("load", () => {
-        let maxHeight = document.body.scrollHeight;
-
-        window.addEventListener("scroll", () => {
-            maxHeight = Math.max(maxHeight, document.body.scrollHeight);
-        });
-
-        window.addEventListener("beforeunload", () => {
-            alert("Final Page Height: " + maxHeight + "px");
-        });
-    });
-</script>
-    <script>
         // Service Worker Registration
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('data:application/javascript;base64,c2VsZi5hZGRFdmVudExpc3RlbmVyKCdpbnN0YWxsJywgZXZlbnQgPT4ge2V2ZW50LndhaXRVbnRpbChzZWxmLnNraXBXYWl0aW5nKCkpO30pO3NlbGYuYWRkRXZlbnRMaXN0ZW5lcignYWN0aXZhdGUnLCBldmVudCA9PiB7ZXZlbnQud2FpdFVudGlsKHNlbGYuY2xpZW50cy5jbGFpbSgpKTt9KTtzZWxmLmFkZEV2ZW50TGlzdGVuZXIoJ2ZldGNoJywgZXZlbnQgPT4ge2V2ZW50LnJlc3BvbmRXaXRoKGZldGNoKGV2ZW50LnJlcXVlc3QpKTt9KTs=', {scope: '.'})
@@ -340,5 +327,12 @@
             }
         });
     </script>
+    <script>
+    window.addEventListener("load", () => {
+        const pageHeight = document.documentElement.scrollHeight;
+        console.log("Page height:", pageHeight + "px");
+        alert("Total Page Height: " + pageHeight + "px");
+    });
+</script>
 </body>
 </html>
